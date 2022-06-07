@@ -1,4 +1,4 @@
-package gabrielle.freville.go4lunch;
+package gabrielle.freville.go4lunch.model;
 
 public class Restaurant {
 
