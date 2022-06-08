@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="gabrielle.freville.go4lunch">
 
     <application
@@ -10,9 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Go4Lunch" />
 
-    <meta-data>
-        android:name="com.google.android.geo.API_KEY"
-        android:value="${MAPS_API_KEY}"
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <meta-data
+        tools:ignore="ExtraText">
+        android:name="com.google.android.maps.v2.API_KEY"
+        android:value="AIzaSyCQP2LiFmM7AU-zYQ7I8o-LYVh0zqmKEZM"
     </meta-data>
 
 </manifest>
