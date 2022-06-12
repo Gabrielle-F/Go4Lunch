@@ -1,4 +1,4 @@
-package gabrielle.freville.go4lunch;
+package gabrielle.freville.go4lunch.ui;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,7 +16,9 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsFragment extends Fragment {
+import gabrielle.freville.go4lunch.R;
+
+public class MapsFragment extends Fragment implements OnMapReadyCallback {
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
@@ -53,5 +55,10 @@ public class MapsFragment extends Fragment {
         if (mapFragment != null) {
             mapFragment.getMapAsync(callback);
         }
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+
     }
 }
