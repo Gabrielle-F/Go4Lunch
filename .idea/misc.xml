@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_authentication.xml" value="0.1" />
+        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_maps.xml" value="0.13451086956521738" />
+        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_restaurants_list.xml" value="0.14719202898550723" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/fragment_maps.xml" value="0.1621376811594203" />
+        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/item_restaurant.xml" value="0.14719202898550723" />
       </map>
     </option>
   </component>
