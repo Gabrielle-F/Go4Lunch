@@ -1,8 +1,14 @@
 package gabrielle.freville.go4lunch.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Restaurant {
 
+    @SerializedName("name")
+    @Expose
     private String name;
+
     private int stars;
     private String address;
     private String hours;
