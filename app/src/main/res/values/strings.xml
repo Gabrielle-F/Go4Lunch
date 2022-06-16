@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Go4Lunch</string>
+
+    <!-- AUTHENTICATION ACTIVITY -->
+    <string name="app_presentation">Find a nice restaurant and invite your coworkers for lunch</string>
+    <string name="facebook_authentication">Sign in with facebook</string>
+    <string name="google_authentication">Sign in with google</string>
 </resources>
