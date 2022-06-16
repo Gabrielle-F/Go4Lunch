@@ -5,4 +5,16 @@
     <string name="app_presentation">Find a nice restaurant and invite your coworkers for lunch</string>
     <string name="facebook_authentication">Sign in with facebook</string>
     <string name="google_authentication">Sign in with google</string>
+
+    <!-- MAIN ACTIVITY -->
+    <string name="imhungry">I\'m Hungry!</string>
+    <string name="search">Search</string>
+    <string name="menu">Menu</string>
+    <string name="map">Map</string>
+    <string name="restaurantlist">Restaurant List</string>
+    <string name="coworkers">Coworkers</string>
+    <string name="mapview">Map View</string>
+    <string name="listview">List View</string>
+    <string name="workmates">Workmates</string>
+
 </resources>

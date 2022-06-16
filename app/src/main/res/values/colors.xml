@@ -11,4 +11,7 @@
     <!-- AUTHENTICATION ACTIVITY -->
     <color name="google_authentication">#d50000</color>
     <color name="facebook_authentication">#1976d2</color>
+
+    <!-- MAIN ACTIVITY -->
+    <color name="toolbar">#f4511e</color>
 </resources>
