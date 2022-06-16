@@ -19,6 +19,7 @@
         />
 
     <TextView
+        android:id="@+id/authentication_activity_presentation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_presentation"
