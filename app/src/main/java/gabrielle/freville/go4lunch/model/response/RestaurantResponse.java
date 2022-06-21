@@ -70,24 +70,6 @@ public class RestaurantResponse {
         public void setWidth(int width) { this.width = width; }
     }
 
-    public class Website {
-
-        @SerializedName("website")
-        @Expose
-        private String website;
-
-        public String getWebsite(String website) { return website; }
-    }
-
-    public class PhoneNumber {
-
-        @SerializedName("formatted_phone_number")
-        @Expose
-        private String phoneNumber;
-
-        public String getPhoneNumber() { return phoneNumber; }
-    }
-
     public class Rating {
 
         @SerializedName("rating")

@@ -16,5 +16,15 @@
     <string name="mapview">Map View</string>
     <string name="listview">List View</string>
     <string name="workmates">Workmates</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+    <!-- RESTAURANT LIST FRAGMENT -->
+    <string name="restaurant_name">Restaurant Name</string>
+    <string name="restaurant_type_address">%1$s - %2$s</string>
+    <string name="restaurant_opening_hours">Opening Hours</string>
+    <string name="restaurant_distance">Restaurant Distance</string>
+    <string name="restaurant_people_ratings_total">Ratings</string>
 
 </resources>

@@ -1,5 +1,9 @@
 package gabrielle.freville.go4lunch.repositories;
 
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -12,57 +16,50 @@ import gabrielle.freville.go4lunch.utils.RestaurantService;
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.observers.DisposableObserver;
+import io.reactivex.schedulers.Schedulers;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RestaurantRepository implements ObservableSource {
+public class RestaurantRepository {
 
     private static final String COLLECTION_NAME = "restaurants";
     private Disposable disposable;
-    private List<Restaurant> restaurantList = new ArrayList<>();
+    private List<RestaurantResponse> restaurantList = new ArrayList<>();
     private RestaurantService restaurantService;
 
     private CollectionReference getRestaurantsCollection() {
         return FirebaseFirestore.getInstance().collection(COLLECTION_NAME);
     }
 
-    public DisposableObserver<List<RestaurantResponse>> getSubscriber(String name, String location, String type, int rating, int userRatingsTotal) {
-        return new DisposableObserver<List<RestaurantResponse>>() {
-            @Override
-            public void onNext(@NonNull List<RestaurantResponse> restaurantResponses) {
-                RestaurantService restaurantService = RestaurantService.retrofit.create(RestaurantService.class);
-                Call<List<RestaurantResponse>> call = restaurantService.getNearbyRestaurantsList(name, location, type, rating, userRatingsTotal);
-                call.enqueue(new Callback<List<RestaurantResponse>>() {
+    public void showResult() {
+        restaurantService.getRestaurants()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<List<RestaurantResponse>>() {
                     @Override
-                    public void onResponse(Call<List<RestaurantResponse>> call, Response<List<RestaurantResponse>> response) {
-                        if (call != null) {
+                    public void onSubscribe(@NonNull Disposable d) {
 
-                        }
                     }
 
                     @Override
-                    public void onFailure(Call<List<RestaurantResponse>> call, Throwable t) {
+                    public void onNext(@NonNull List<RestaurantResponse> restaurantResponses) {
+
+                    }
+
+                    @Override
+                    public void onError(@NonNull Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
 
                     }
                 });
-            }
-
-            @Override
-            public void onError(@NonNull Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-            }
-        };
-    }
-
-    @Override
-    public void subscribe(@NonNull Observer observer) {
-
     }
 }

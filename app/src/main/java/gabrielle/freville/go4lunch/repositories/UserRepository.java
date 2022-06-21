@@ -10,4 +10,6 @@ public class UserRepository {
     private CollectionReference getUsersCollection() {
         return FirebaseFirestore.getInstance().collection(COLLECTION_NAME);
     }
+
+
 }
