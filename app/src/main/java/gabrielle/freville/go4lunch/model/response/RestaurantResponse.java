@@ -13,9 +13,9 @@ public class RestaurantResponse {
 
         @SerializedName("location")
         @Expose
-        private Location location;
+        private Geometry location;
 
-        public Geometry(Location location) {
+        public Geometry(Geometry location) {
             this.location = location;
         }
     }
