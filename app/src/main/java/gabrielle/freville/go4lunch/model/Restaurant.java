@@ -12,12 +12,20 @@ public class Restaurant {
     private int stars;
     private String address;
     private String hours;
+    private String distance;
 
     public Restaurant() { }
 
-    public Restaurant(String name, int stars, String address, String hours) {
+    public Restaurant(String name, int stars, String address, String hours, String distance) {
         this.name = name;
         this.stars = stars;
+        this.address = address;
+        this.hours = hours;
+        this.distance = distance;
+    }
+
+    public Restaurant(String name, String address, String hours) {
+        this.name = name;
         this.address = address;
         this.hours = hours;
     }
@@ -39,6 +47,8 @@ public class Restaurant {
         return hours;
     }
 
+    public String getDistance() { return distance; }
+
     // SETTERS //
     public void setName(String name) {
         this.name = name;
@@ -55,4 +65,6 @@ public class Restaurant {
     public void setHours(String hours) {
         this.hours = hours;
     }
+
+    public void setDistance(String distance) { this.distance = distance; }
 }

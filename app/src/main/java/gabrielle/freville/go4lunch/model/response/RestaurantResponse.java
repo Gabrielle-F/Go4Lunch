@@ -88,12 +88,12 @@ public class RestaurantResponse {
         public int getUserRatingsTotal() { return userRatingsTotal; }
     }
 
-    public class AdressComponents {
+    public class Vicinity {
 
-        @SerializedName("long_name")
+        @SerializedName("vicinity")
         @Expose
-        private String longName;
+        private String vicinity;
 
-        public String getLongName() { return longName; }
+        public String getVicinity() { return vicinity; }
     }
 }
