@@ -8,21 +8,23 @@ public class User {
     private String firstName;
     private String lastName;
     private String id;
-    private Uri picture;
+    private String pictureUrl;
+    private String email;
 
     public User() { }
 
-    public User(String firstName, String lastName, String id, Uri picture) {
+    public User(String firstName, String lastName, String id, String pictureUrl, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = id;
-        this.picture = picture;
+        this.pictureUrl = pictureUrl;
+        this.email = email;
     }
 
-    public User(String firstName, String id, Uri picture) {
+    public User(String firstName, String id, String pictureUrl) {
         this.firstName = firstName;
         this.id = id;
-        this.picture = picture;
+        this.pictureUrl = pictureUrl;
     }
 
     // GETTERS //
@@ -38,7 +40,7 @@ public class User {
         return id;
     }
 
-    public Uri getUrlPicture() { return picture; }
+    public String getUrlPicture() { return pictureUrl; }
 
     // SETTERS //
     public void setFirstName(String firstName) {
@@ -53,5 +55,5 @@ public class User {
         this.id = id;
     }
 
-    public void setUrlPicture(Uri picture) { this.picture = picture; }
+    public void setUrlPicture(String pictureUrl) { this.pictureUrl = pictureUrl; }
 }
