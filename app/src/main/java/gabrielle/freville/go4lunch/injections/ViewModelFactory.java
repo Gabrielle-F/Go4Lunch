@@ -4,9 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
-import gabrielle.freville.go4lunch.model.User;
 import gabrielle.freville.go4lunch.repositories.RestaurantRepository;
 import gabrielle.freville.go4lunch.repositories.UserRepository;
+import gabrielle.freville.go4lunch.viewModel.RestaurantViewModel;
 
 public class ViewModelFactory implements ViewModelProvider.Factory {
 
@@ -20,9 +20,9 @@ public class ViewModelFactory implements ViewModelProvider.Factory {
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-        if (modelClass.isAssignableFrom(gabrielle.freville.go4lunch.viewModel.ViewModel.class)) {
-            return (T) new gabrielle.freville.go4lunch.viewModel.ViewModel(restaurantRepository, userRepository);
+        if (modelClass.isAssignableFrom(RestaurantViewModel.class)) {
+            return (T) new RestaurantViewModel(restaurantRepository, userRepository);
         }
-        throw new IllegalArgumentException("Unknown ViewModel class");
+        throw new IllegalArgumentException("Unknown RestaurantViewModel class");
     }
 }
