@@ -4,17 +4,22 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import gabrielle.freville.go4lunch.model.Restaurant;
+import gabrielle.freville.go4lunch.model.SelectedRestaurant;
 import gabrielle.freville.go4lunch.model.response.RestaurantResponse;
 import gabrielle.freville.go4lunch.utils.RestaurantService;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 
@@ -28,7 +33,8 @@ public class RestaurantRepository {
     private String type = "restaurant";
     private Boolean opennow = true;
     private String openingHours;
-    public LiveData<List<RestaurantResponse>> listLiveData;
+    private String vicinity;
+    public MutableLiveData<List<Restaurant>> listLiveData;
 
     private CollectionReference getRestaurantsCollection() {
         return FirebaseFirestore.getInstance().collection(COLLECTION_NAME);
@@ -39,19 +45,36 @@ public class RestaurantRepository {
         return restaurantService;
     }
 
-    public void showResult() {
+    public void getRestaurantsList() {
         this.getRestaurantService();
         this.getRetrofitInstance();
-        restaurantService.getRestaurants(name, type, geometry, opennow, openingHours)
+        restaurantService.getRestaurants(name, type, geometry, opennow, openingHours, vicinity)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<List<RestaurantResponse>>() {
+                .map(new Function<List<RestaurantResponse>, List<Restaurant>>() {
+                    @Override
+                    public List<Restaurant> apply(List<RestaurantResponse> restaurantResponses) throws Exception {
+                        List<Restaurant> restaurantList = new ArrayList<>();
+                        for (RestaurantResponse restaurant : restaurantResponses) {
+                            Restaurant restaurantInstance = new Restaurant(
+                                    name = restaurant.getName(),
+                                    vicinity = restaurant.getVicinity(),
+                                    opennow = restaurant.getOpennow()
+                            );
+                            restaurantList.add(restaurantInstance);
+                        }
+                        return restaurantList;
+                    }
+                })
+                .subscribe(new Observer<List<Restaurant>>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
                     }
 
                     @Override
-                    public void onNext(@NonNull List<RestaurantResponse> restaurantResponses) {
+                    public void onNext(@NonNull List<Restaurant> restaurants) {
+                        listLiveData.setValue(restaurants);
+                        Log.e(TAG, "Return restaurant list");
                     }
 
                     @Override
@@ -60,9 +83,13 @@ public class RestaurantRepository {
 
                     @Override
                     public void onComplete() {
-                        Log.e(TAG, "Return restaurant list");
+
                     }
                 });
+    }
+
+    public LiveData<List<Restaurant>> getRestaurantsLiveData() {
+        return listLiveData;
     }
 
     public Retrofit getRetrofitInstance() {
