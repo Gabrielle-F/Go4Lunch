@@ -44,4 +44,28 @@ public class UserViewModel extends androidx.lifecycle.ViewModel {
     public Task<Void> deleteUser(Context context) {
         return userRepository.getCurrentUser().delete().addOnCompleteListener(task -> userRepository.deleteUserFromFirestore());
     }
+
+    public LiveData<List<User>> getUsers() {
+        return userRepository.getUsersList();
+    }
+
+    public Task<String> getProfilePicture(String profilePicture) {
+        return userRepository.getProfiltePictureUri(profilePicture).continueWith((Continuation<DocumentSnapshot, String>) task -> task.getResult().toString());
+    }
+
+    public LiveData<List<SelectedRestaurant>> getSelectedRestaurants() {
+        return userRepository.getSelectedRestaurants();
+    }
+
+    public Task<DocumentSnapshot> getSelectedRestaurantId() {
+        return userRepository.getSelectedRestaurantId();
+    }
+
+    public Task<DocumentSnapshot> getUserId() {
+        return userRepository.getUserId();
+    }
+
+    public Task<DocumentSnapshot> getSelectedRestaurantName(String name) {
+        return userRepository.getSelectedRestaurantName(name);
+    }
 }
