@@ -13,6 +13,7 @@ public class Restaurant {
     private String address;
     private String hours;
     private String distance;
+    private Boolean opennow;
 
     public Restaurant() { }
 
@@ -24,10 +25,10 @@ public class Restaurant {
         this.distance = distance;
     }
 
-    public Restaurant(String name, String address, String hours) {
+    public Restaurant(String name, String address, Boolean opennow) {
         this.name = name;
         this.address = address;
-        this.hours = hours;
+        this.opennow = opennow;
     }
 
     // GETTERS //
