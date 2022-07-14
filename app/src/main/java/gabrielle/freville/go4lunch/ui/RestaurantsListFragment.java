@@ -79,9 +79,4 @@ public class RestaurantsListFragment extends Fragment {
         restaurantViewModel.getRestaurants();
         super.onStart();
     }
-
-    public LiveData<List<Restaurant>> returnRestaurantsList() {
-        listLiveData = restaurantViewModel.getLiveData();
-        return listLiveData;
-    }
 }
