@@ -54,7 +54,7 @@ public class WorkmatesRecyclerViewAdapter extends RecyclerView.Adapter<Workmates
         holder.workmateRestaurantChoice.setText(restaurantChoice);
     }
 
-    public void updateWorkmatesList(final List<User> users) {
+    public void updateWorkmatesList(List<User> users) {
         this.users = users;
         notifyDataSetChanged();
     }

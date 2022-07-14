@@ -54,6 +54,8 @@ public class RestaurantsListFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         configureViewModel();
+        listLiveData = restaurantViewModel.getLiveData();
+        Objects.requireNonNull(listLiveData).observe(getViewLifecycleOwner(), this::initList);
 
         return super.onCreateView(inflater, container, savedInstanceState);
     }
@@ -66,6 +68,10 @@ public class RestaurantsListFragment extends Fragment {
     private void configureViewModel() {
         ViewModelFactory factory = Injection.provideViewModelFactory(getContext());
         this.restaurantViewModel = new ViewModelProvider(this, factory).get(RestaurantViewModel.class);
+    }
+
+    public void initList(List<Restaurant> restaurants) {
+        adapter.updateRestaurantsList(restaurants);
     }
 
     @Override

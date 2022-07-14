@@ -40,6 +40,11 @@ public class RestaurantRecyclerViewAdapter extends RecyclerView.Adapter<Restaura
         holder.restaurantDistance.setText(restaurant.getDistance());
     }
 
+    public void updateRestaurantsList(List<Restaurant> restaurants) {
+        this.restaurants = restaurants;
+        notifyDataSetChanged();
+    }
+
     public static class RestaurantViewHolder extends RecyclerView.ViewHolder {
 
         TextView restaurantName;
