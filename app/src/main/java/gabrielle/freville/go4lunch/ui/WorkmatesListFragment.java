@@ -50,11 +50,12 @@ public class WorkmatesListFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         adapter = new WorkmatesRecyclerViewAdapter(users);
         recyclerView.setAdapter(adapter);
+
         configureViewModel();
         liveData = userViewModel.getUsers();
         Objects.requireNonNull(liveData).observe(getViewLifecycleOwner(), this::initList);
 
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return view;
     }
 
     private void configureViewModel() {

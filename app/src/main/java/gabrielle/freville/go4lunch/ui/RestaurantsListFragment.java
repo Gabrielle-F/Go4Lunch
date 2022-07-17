@@ -1,5 +1,9 @@
 package gabrielle.freville.go4lunch.ui;
 
+import android.Manifest;
+import android.app.FragmentContainer;
+import android.content.pm.PackageManager;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,7 +42,6 @@ public class RestaurantsListFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        this.getLatLng();
 
         super.onViewCreated(view, savedInstanceState);
     }
@@ -57,12 +60,7 @@ public class RestaurantsListFragment extends Fragment {
         listLiveData = restaurantViewModel.getLiveData();
         Objects.requireNonNull(listLiveData).observe(getViewLifecycleOwner(), this::initList);
 
-        return super.onCreateView(inflater, container, savedInstanceState);
-    }
-
-    private void getLatLng() {
-        LatLng latLng = new com.google.android.gms.maps.model.LatLng(48.69141, 1.07869);
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        return view;
     }
 
     private void configureViewModel() {
