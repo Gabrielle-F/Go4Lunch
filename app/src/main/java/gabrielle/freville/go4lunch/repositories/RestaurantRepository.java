@@ -34,7 +34,7 @@ public class RestaurantRepository {
     private Boolean opennow = true;
     private String openingHours;
     private String vicinity;
-    public MutableLiveData<List<Restaurant>> listLiveData;
+    public MutableLiveData<List<Restaurant>> listLiveData = new MutableLiveData<>();
 
     private CollectionReference getRestaurantsCollection() {
         return FirebaseFirestore.getInstance().collection(COLLECTION_NAME);
