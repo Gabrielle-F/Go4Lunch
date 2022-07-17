@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Screen margins -->
+    <dimen name="activity_horizontal_margin">10dp</dimen>
+    <dimen name="activity_vertical_margin">10dp</dimen>
+    <dimen name="appbar_padding">10dp</dimen>
+    <dimen name="fab_margin">10dp</dimen>
+    <dimen name="appbar_padding_top">5dp</dimen>
+
+    <!-- Navigation View Header Height -->
+    <dimen name="navigation_view_header_height">120dp</dimen>
+
+    <!-- Authentication Activity Values -->
+    <dimen name="logo_size_width">150dp</dimen>
+    <dimen name="logo_size_height">150dp</dimen>
+    <dimen name="app_name_size">40dp</dimen>
+    <dimen name="app_description_text_size">6dp</dimen>
+    <dimen name="buttons_size_height">60dp</dimen>
+    <dimen name="buttons_size_width">220dp</dimen>
+    <dimen name="authentication_facebook_button_margin_bottom">30dp</dimen>
+    <dimen name="authentication_google_button_margin_bottom">30dp</dimen>
+
+</resources>
