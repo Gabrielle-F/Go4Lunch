@@ -6,6 +6,12 @@
     <string name="facebook_authentication">Sign in with facebook</string>
     <string name="google_authentication">Sign in with google</string>
 
+    <!-- SNACKBAR CONNECTION -->
+    <string name="connection_succeed">Connection Succeed !</string>
+    <string name="error_no_internet">Error No Network !</string>
+    <string name="error_authentication_canceled">Error Authentication Canceled !</string>
+    <string name="unknown_error">Unknown Error !</string>
+
     <!-- MAIN ACTIVITY -->
     <string name="imhungry">I\'m Hungry!</string>
     <string name="search">Search</string>
@@ -19,10 +25,12 @@
     <string name="title_activity_main2">MainActivity2</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="no_email_found">No Email Found</string>
+    <string name="no_username_found">No Username Found</string>
 
     <!-- RESTAURANT LIST FRAGMENT -->
     <string name="restaurant_name">Restaurant Name</string>
-    <string name="restaurant_type_address">%1$s - %2$s</string>
+    <string name="restaurant_address">Address</string>
     <string name="restaurant_opening_hours">Opening Hours</string>
     <string name="restaurant_distance">Restaurant Distance</string>
     <string name="restaurant_people_ratings_total">Ratings</string>
@@ -36,5 +44,32 @@
     <string name="logout">Logout</string>
     <string name="navigation_view_open">Open navigation drawer</string>
     <string name="navigation_view_close">Close navigation drawer</string>
+
+    <!-- RESTAURANT MAP FRAGMENT -->
+    <string name="location_permission_allow_never_ask">Permission Allowed</string>
+    <string name="location_permission_denied_never_ask">Permission Denied</string>
+    <string name="button_allow">Allow</string>
+    <string name="button_deny">Deny</string>
+    <string name="permission_location">Allow Go4Lunch to access to your location ?</string>
+
+    <!-- WORKMATE ITEM -->
+    <string name="isEating">is eating at</string>
+    <string name="mangeChez">mange chez</string>
+    <string name="noDecided">has not decided yet</string>
+    <string name="pasDécidé">n\'a pas encore décidé</string>
+
+    <!-- NOTIFICATION SERVICE -->
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="notification_title">"Vous mangez chez"</string>
+
+    <!-- SETTINGS ACTIVITY -->
+    <string name="notifications">Notifications</string>
+
+    <!-- DETAILS ACTIVITY -->
+    <string name="details_restaurant_name">Name</string>
+    <string name="details_restaurant_address">Address</string>
+    <string name="details_call">Call</string>
+    <string name="details_like">Like</string>
+    <string name="details_website">Website</string>
 
 </resources>
