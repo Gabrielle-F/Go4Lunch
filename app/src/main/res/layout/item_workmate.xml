@@ -14,12 +14,30 @@
         android:layout_marginTop="20dp"/>
 
     <TextView
+        android:id="@+id/item_workmate_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/item_workmate_profile_picture"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/item_workmate_is_eating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/item_workmate_name"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
         android:id="@+id/item_workmate_choice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/item_workmate_profile_picture"
+        app:layout_constraintStart_toEndOf="@id/item_workmate_is_eating"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
