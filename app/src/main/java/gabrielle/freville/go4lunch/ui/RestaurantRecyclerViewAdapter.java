@@ -16,7 +16,6 @@ import gabrielle.freville.go4lunch.model.Restaurant;
 public class RestaurantRecyclerViewAdapter extends RecyclerView.Adapter<RestaurantRecyclerViewAdapter.RestaurantViewHolder> {
 
     private List<Restaurant> restaurants;
-    private List<Restaurant> restaurantsList;
 
     public RestaurantRecyclerViewAdapter(List<Restaurant> items){
         restaurants = items;
@@ -37,12 +36,6 @@ public class RestaurantRecyclerViewAdapter extends RecyclerView.Adapter<Restaura
         holder.restaurantName.setText(restaurant.getName());
         holder.restaurantAddress.setText(restaurant.getAddress());
         holder.restaurantOpeningHours.setText(restaurant.getHours());
-        holder.restaurantDistance.setText(restaurant.getDistance());
-    }
-
-    public void updateRestaurantsList(List<Restaurant> restaurants) {
-        this.restaurants = restaurants;
-        notifyDataSetChanged();
     }
 
     public static class RestaurantViewHolder extends RecyclerView.ViewHolder {
@@ -50,19 +43,23 @@ public class RestaurantRecyclerViewAdapter extends RecyclerView.Adapter<Restaura
         TextView restaurantName;
         TextView restaurantAddress;
         TextView restaurantOpeningHours;
-        TextView restaurantDistance;
 
         public RestaurantViewHolder(@NonNull View itemView) {
             super(itemView);
             restaurantName.findViewById(R.id.item_restaurant_name);
             restaurantAddress.findViewById(R.id.item_restaurant_address);
             restaurantOpeningHours.findViewById(R.id.item_restaurant_open);
-            restaurantDistance.findViewById(R.id.item_restaurant_distance);
         }
     }
 
     @Override
     public int getItemCount() {
         return restaurants.size();
+    }
+
+    public void updateRestaurantsList(List<Restaurant> restaurants) {
+        this.restaurants.clear();
+        this.restaurants.addAll(restaurants);
+        notifyDataSetChanged();
     }
 }

@@ -31,7 +31,6 @@ import gabrielle.freville.go4lunch.viewModel.UserViewModel;
 
 public class AuthenticationActivity extends AppCompatActivity {
 
-    private ImageView background;
     private ImageView logo;
     private TextView appPresentation;
     private Button facebookButton;
