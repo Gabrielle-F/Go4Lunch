@@ -19,6 +19,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Go4Lunch">
         <activity
+            android:name=".ui.RestaurantDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
