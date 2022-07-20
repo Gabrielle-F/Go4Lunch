@@ -73,4 +73,8 @@ public class UserViewModel extends androidx.lifecycle.ViewModel {
     public Task<DocumentSnapshot> getSelectedRestaurantName(String name) {
         return userRepository.getSelectedRestaurantName(name);
     }
+
+    public Task<DocumentSnapshot> getNotifications() {
+        return userRepository.getNotifications();
+    }
 }

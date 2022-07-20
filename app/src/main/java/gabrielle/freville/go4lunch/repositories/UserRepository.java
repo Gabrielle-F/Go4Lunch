@@ -1,7 +1,5 @@
 package gabrielle.freville.go4lunch.repositories;
 
-import android.media.Image;
-import android.net.Uri;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -18,7 +16,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +29,7 @@ public class UserRepository {
     private static final String USERNAME_FIELD = "firstName";
     private static final String SELECTED_RESTAURANT_ID = "restaurantId";
     private static final String USER_ID = "userId";
+    private static final String USER_NOTIFICATIONS = "notifications";
     private static final String TAG = "Users List";
     private MutableLiveData<List<User>> usersList = new MutableLiveData<>();
     private MutableLiveData<List<SelectedRestaurant>> selectedRestaurantsList = new MutableLiveData<>();
@@ -104,7 +102,8 @@ public class UserRepository {
         }
     }
 
-    public FirebaseUser getCurrentUser() { return FirebaseAuth.getInstance().getCurrentUser();
+    public FirebaseUser getCurrentUser() {
+        return FirebaseAuth.getInstance().getCurrentUser();
     }
 
     public void deleteUserFromFirestore() {
@@ -164,6 +163,15 @@ public class UserRepository {
 
     public Task<DocumentSnapshot> getUserId() {
         return this.getSelectedRestaurantsCollection().document(USER_ID).get();
+    }
+
+    public Task<DocumentSnapshot> getNotifications() {
+        String uid = this.getCurrentUser().getUid();
+        if (uid != null) {
+            return this.getUsersCollection().document(USER_NOTIFICATIONS).get();
+        } else {
+            return null;
+        }
     }
 
 }
