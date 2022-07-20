@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="@dimen/navigation_view_header_height"
-    android:background="#000000"
+    android:background="@drawable/background_authentication_activity"
     android:gravity="center"
     android:id="@+id/nav_header">
 
