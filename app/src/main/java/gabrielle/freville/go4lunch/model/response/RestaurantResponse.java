@@ -9,6 +9,39 @@ import java.util.List;
 
 public class RestaurantResponse {
 
+    @SerializedName("name")
+    @Expose
+    private String name;
+
+    @SerializedName("vicinity")
+    @Expose
+    private String vicinity;
+
+    @SerializedName("opening_hours")
+    @Expose
+    private Boolean opennow;
+
+    public RestaurantResponse(String name, Boolean opennow, String address) {
+        this.name = name;
+        this.opennow = opennow;
+        this.vicinity = address;
+    }
+
+    //GETTERS//
+
+
+    public String getName() {
+        return name;
+    }
+
+    public String getVicinity() {
+        return vicinity;
+    }
+
+    public Boolean getOpennow() {
+        return opennow;
+    }
+
     public class Geometry {
 
         @SerializedName("location")
@@ -20,7 +53,7 @@ public class RestaurantResponse {
         }
     }
 
-    public class Name {
+    public static class Name {
 
         @SerializedName("name")
         @Expose
@@ -31,7 +64,7 @@ public class RestaurantResponse {
         }
     }
 
-    public class OpeningHours {
+    public static class OpeningHours {
 
         @SerializedName("opening_hours")
         @Expose
@@ -40,7 +73,7 @@ public class RestaurantResponse {
         public Boolean getOpennow() { return opennow; }
     }
 
-    public class Type {
+    public static class Type {
 
         @SerializedName("type")
         @Expose
@@ -49,7 +82,7 @@ public class RestaurantResponse {
         public String getType() { return type; }
     }
 
-    public class Photos {
+    public static class Photos {
 
         @SerializedName("html_attributions")
         @Expose
@@ -70,7 +103,7 @@ public class RestaurantResponse {
         public void setWidth(int width) { this.width = width; }
     }
 
-    public class Rating {
+    public static class Rating {
 
         @SerializedName("rating")
         @Expose
@@ -79,21 +112,12 @@ public class RestaurantResponse {
         public int getRating() { return rating; }
     }
 
-    public class UserRatingsTotal {
+    public static class UserRatingsTotal {
 
         @SerializedName("user_ratings_total")
         @Expose
         private int userRatingsTotal;
 
         public int getUserRatingsTotal() { return userRatingsTotal; }
-    }
-
-    public class Vicinity {
-
-        @SerializedName("vicinity")
-        @Expose
-        private String vicinity;
-
-        public String getVicinity() { return vicinity; }
     }
 }
