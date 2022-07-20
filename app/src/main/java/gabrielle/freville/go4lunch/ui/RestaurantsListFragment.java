@@ -22,6 +22,7 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -36,7 +37,7 @@ public class RestaurantsListFragment extends Fragment {
     private RestaurantViewModel restaurantViewModel;
     private RecyclerView recyclerView;
     private RestaurantRecyclerViewAdapter adapter;
-    private List<Restaurant> restaurantsList = null;
+    private List<Restaurant> restaurantsList = new ArrayList<>();
     private MainActivity mainActivity;
     private LiveData<List<Restaurant>> listLiveData;
     private FusedLocationProviderClient fusedLocationProviderClient;
