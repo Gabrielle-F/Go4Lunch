@@ -5,8 +5,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class Restaurant {
 
-    @SerializedName("name")
-    @Expose
     private String name;
 
     private int stars;
@@ -14,6 +12,9 @@ public class Restaurant {
     private String hours;
     private String distance;
     private Boolean opennow;
+    private int rating;
+    private int userRatingsTotal;
+    private String photoReference;
 
     public Restaurant() { }
 
@@ -25,10 +26,13 @@ public class Restaurant {
         this.distance = distance;
     }
 
-    public Restaurant(String name, String address, Boolean opennow) {
+    public Restaurant(String name, String address, Boolean opennow, int rating, int userRatingsTotal, String photoReference) {
         this.name = name;
         this.address = address;
         this.opennow = opennow;
+        this.rating = rating;
+        this.userRatingsTotal = userRatingsTotal;
+        this.photoReference = photoReference;
     }
 
     // GETTERS //
@@ -49,6 +53,10 @@ public class Restaurant {
     }
 
     public String getDistance() { return distance; }
+
+    public int getUserRatingsTotal() { return userRatingsTotal; }
+
+    public int getRating() { return rating; }
 
     // SETTERS //
     public void setName(String name) {

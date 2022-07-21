@@ -77,4 +77,6 @@ public class UserViewModel extends androidx.lifecycle.ViewModel {
     public Task<DocumentSnapshot> getNotifications() {
         return userRepository.getNotifications();
     }
+
+    public Task<Void> signOut(Context context) { return userRepository.signOut(context); }
 }

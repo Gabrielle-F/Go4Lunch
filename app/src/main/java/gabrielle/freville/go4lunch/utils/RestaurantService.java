@@ -2,6 +2,7 @@ package gabrielle.freville.go4lunch.utils;
 
 import java.util.List;
 
+import gabrielle.freville.go4lunch.R;
 import gabrielle.freville.go4lunch.model.response.RestaurantResponse;
 import io.reactivex.Observable;
 import retrofit2.Retrofit;
@@ -18,14 +19,17 @@ public interface RestaurantService {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build();
 
-    @GET("nearbysearch/json")
+    @GET("nearbysearch/json?type=restaurant&key=" + R.string.google_maps_key)
     Observable<List<RestaurantResponse>> getRestaurants(
             @Query("name") String name,
             @Query("type") String type,
             @Query("geometry") String geometry,
             @Query("open_now") Boolean opennow,
             @Query("opening_hours") String openingHours,
-            @Query("vicinity") String vicinity
+            @Query("vicinity") String address,
+            @Query("photos_reference") String photoReference,
+            @Query("rating") int rating,
+            @Query("user_ratings_total") int userRatingsTotal
     );
 
 }

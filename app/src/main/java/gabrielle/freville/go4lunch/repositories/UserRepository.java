@@ -1,10 +1,12 @@
 package gabrielle.freville.go4lunch.repositories;
 
+import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
+import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -172,6 +174,10 @@ public class UserRepository {
         } else {
             return null;
         }
+    }
+
+    public Task<Void> signOut(Context context) {
+        return AuthUI.getInstance().signOut(context);
     }
 
 }

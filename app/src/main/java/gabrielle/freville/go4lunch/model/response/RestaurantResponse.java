@@ -1,7 +1,5 @@
 package gabrielle.freville.go4lunch.model.response;
 
-import android.location.Location;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -15,109 +13,64 @@ public class RestaurantResponse {
 
     @SerializedName("vicinity")
     @Expose
-    private String vicinity;
+    private String address;
 
     @SerializedName("opening_hours")
     @Expose
     private Boolean opennow;
 
-    public RestaurantResponse(String name, Boolean opennow, String address) {
+    @SerializedName("html_attributions")
+    @Expose
+    private List<Object> htmlAttributions = null;
+    @SerializedName("photo_reference")
+    @Expose
+    private String photoReference;
+    private int height;
+    private int width;
+
+    @SerializedName("rating")
+    @Expose
+    private int rating;
+
+    @SerializedName("user_ratings_total")
+    @Expose
+    private int userRatingsTotal;
+
+    @SerializedName("location")
+    @Expose
+    private String location;
+
+    public RestaurantResponse(String name, Boolean opennow, String address, int rating, int userRatingsTotal, String photoReference) {
         this.name = name;
         this.opennow = opennow;
-        this.vicinity = address;
+        this.address = address;
+        this.rating = rating;
+        this.userRatingsTotal = userRatingsTotal;
+        this.photoReference = photoReference;
     }
 
     //GETTERS//
 
-
     public String getName() {
         return name;
     }
-
-    public String getVicinity() {
-        return vicinity;
+    public String getAddress() {
+        return address;
     }
-
     public Boolean getOpennow() {
         return opennow;
     }
+    public int getHeight() { return height; }
+    public int getWidth() { return width; }
+    public String getPhotoReference() { return photoReference; }
+    public List<Object> getHtmlAttributions() { return htmlAttributions; }
+    public int getRating() { return rating; }
+    public int getUserRatingsTotal() { return userRatingsTotal; }
 
-    public class Geometry {
+    // SETTERS //
 
-        @SerializedName("location")
-        @Expose
-        private Geometry location;
-
-        public Geometry(Geometry location) {
-            this.location = location;
-        }
-    }
-
-    public static class Name {
-
-        @SerializedName("name")
-        @Expose
-        private String name;
-
-        public Name(String name) {
-            this.name = name;
-        }
-    }
-
-    public static class OpeningHours {
-
-        @SerializedName("opening_hours")
-        @Expose
-        private Boolean opennow;
-
-        public Boolean getOpennow() { return opennow; }
-    }
-
-    public static class Type {
-
-        @SerializedName("type")
-        @Expose
-        private String type;
-
-        public String getType() { return type; }
-    }
-
-    public static class Photos {
-
-        @SerializedName("html_attributions")
-        @Expose
-        private List<Object> htmlAttributions = null;
-        @SerializedName("photo_reference")
-        @Expose
-        private String photoReference;
-        private int height;
-        private int width;
-
-        public List<Object> getHtmlAttributions() { return htmlAttributions; }
-        public void setHtmlAttributions(List<Object> htmlAttributions) { this.htmlAttributions = htmlAttributions; }
-        public String getPhotoReference() { return photoReference; }
-        public void setPhotoReference(String photoReference) { this.photoReference = photoReference; }
-        public int getHeight() { return height; }
-        public void setHeight(int height) { this.height = height; }
-        public int getWidth() { return width; }
-        public void setWidth(int width) { this.width = width; }
-    }
-
-    public static class Rating {
-
-        @SerializedName("rating")
-        @Expose
-        private int rating;
-
-        public int getRating() { return rating; }
-    }
-
-    public static class UserRatingsTotal {
-
-        @SerializedName("user_ratings_total")
-        @Expose
-        private int userRatingsTotal;
-
-        public int getUserRatingsTotal() { return userRatingsTotal; }
-    }
+    public void setHtmlAttributions(List<Object> htmlAttributions) { this.htmlAttributions = htmlAttributions; }
+    public void setPhotoReference(String photoReference) { this.photoReference = photoReference; }
+    public void setHeight(int height) { this.height = height; }
+    public void setWidth(int width) { this.width = width; }
 }

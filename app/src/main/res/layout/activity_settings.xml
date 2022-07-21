@@ -21,9 +21,11 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="30dp"
         android:text="@string/notifications"
+        android:textSize="25dp"
         android:textStyle="bold"/>
 
     <ImageButton
+        android:id="@+id/activity_settings_notifications_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_notifications"
@@ -31,7 +33,28 @@
         app:layout_constraintStart_toEndOf="@+id/activity_settings_notifications_text"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
+        android:backgroundTint="@color/white"
         />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Favorites Restaurants"
+            android:textColor="@color/toolbar"
+            android:textSize="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/activity_settings_recycler_view_favorites_restaurants"
+            android:layout_marginBottom="20dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_settings_recycler_view_favorites_restaurants"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            />
 
 
 

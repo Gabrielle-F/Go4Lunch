@@ -13,7 +13,8 @@
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_main_nav_header.xml" value="0.16259057971014493" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_main_toolbar.xml" value="0.14719202898550723" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_maps.xml" value="0.13451086956521738" />
-        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_restaurant_details.xml" value="0.1" />
+        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_restaurant_details.xml" value="0.18" />
+        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_restaurant_details_recycler_view.xml" value="0.1" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_restaurant_details_toolbar.xml" value="0.15" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_restaurants_list.xml" value="0.14719202898550723" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_settings.xml" value="0.10371376811594203" />
@@ -24,6 +25,7 @@
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/fragment_workmates_list.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/item_restaurant.xml" value="0.25" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/item_workmate.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/item_workmate_restaurant_details_list.xml" value="0.1" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/menu/menu_activity_main_bottom_bar.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/menu/menu_activity_main_drawer.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/menu/menu_activity_main_toolbar.xml" value="0.20416666666666666" />

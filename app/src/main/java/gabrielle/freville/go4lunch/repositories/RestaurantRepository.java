@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import gabrielle.freville.go4lunch.model.Restaurant;
-import gabrielle.freville.go4lunch.model.SelectedRestaurant;
 import gabrielle.freville.go4lunch.model.response.RestaurantResponse;
 import gabrielle.freville.go4lunch.utils.RestaurantService;
 import io.reactivex.Observer;
@@ -28,12 +27,17 @@ public class RestaurantRepository {
     private static final String COLLECTION_NAME = "restaurants";
     private RestaurantService restaurantService;
     private static final String TAG = "ListRestaurants";
+
     private String name;
     private String geometry;
     private String type = "restaurant";
     private Boolean opennow = true;
     private String openingHours;
     private String vicinity;
+    private int rating;
+    private int userRatingsTotal;
+    private String photoReference;
+
     public MutableLiveData<List<Restaurant>> listLiveData = new MutableLiveData<>();
 
     private CollectionReference getRestaurantsCollection() {
@@ -48,7 +52,7 @@ public class RestaurantRepository {
     public void getRestaurantsList() {
         this.getRestaurantService();
         this.getRetrofitInstance();
-        restaurantService.getRestaurants(name, type, geometry, opennow, openingHours, vicinity)
+        restaurantService.getRestaurants(name, type, geometry, opennow, openingHours, vicinity, photoReference, rating, userRatingsTotal)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map(new Function<List<RestaurantResponse>, List<Restaurant>>() {
@@ -58,8 +62,11 @@ public class RestaurantRepository {
                         for (RestaurantResponse restaurant : restaurantResponses) {
                             Restaurant restaurantInstance = new Restaurant(
                                     name = restaurant.getName(),
-                                    vicinity = restaurant.getVicinity(),
-                                    opennow = restaurant.getOpennow()
+                                    vicinity = restaurant.getAddress(),
+                                    opennow = restaurant.getOpennow(),
+                                    rating = restaurant.getRating(),
+                                    userRatingsTotal = restaurant.getUserRatingsTotal(),
+                                    photoReference = restaurant.getPhotoReference()
                             );
                             restaurantList.add(restaurantInstance);
                         }
