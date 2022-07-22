@@ -36,26 +36,4 @@
         android:backgroundTint="@color/white"
         />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Favorites Restaurants"
-            android:textColor="@color/toolbar"
-            android:textSize="25dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/activity_settings_recycler_view_favorites_restaurants"
-            android:layout_marginBottom="20dp"
-            />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/activity_settings_recycler_view_favorites_restaurants"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-
-            />
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
