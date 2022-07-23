@@ -1,5 +1,7 @@
 package gabrielle.freville.go4lunch.utils;
 
+import android.location.Location;
+
 import java.util.List;
 
 import gabrielle.freville.go4lunch.R;
@@ -19,17 +21,31 @@ public interface RestaurantService {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build();
 
-    @GET("nearbysearch/json?type=restaurant&key=" + R.string.google_maps_key)
+    /** Get nearby places **/
+    @GET("nearbysearch/json?")
     Observable<List<RestaurantResponse>> getRestaurants(
-            @Query("name") String name,
             @Query("type") String type,
-            @Query("geometry") String geometry,
-            @Query("open_now") Boolean opennow,
-            @Query("opening_hours") String openingHours,
-            @Query("vicinity") String address,
-            @Query("photos_reference") String photoReference,
-            @Query("rating") int rating,
-            @Query("user_ratings_total") int userRatingsTotal
+            @Query("location") Location location,
+            @Query("radius") int radius,
+            @Query("key") int key
+    );
+
+    /** Get nearby places matching the keyword searched by the user */
+    @GET("nearbysearch/json?")
+    Observable<List<RestaurantResponse>> getRestaurantsFromUserResearch(
+            @Query("type") String type,
+            @Query("location") Location location,
+            @Query("radius") int radius,
+            @Query("key") int key,
+            @Query("keyword") String restaurantName
+    );
+
+
+    /** Get Restaurant Details */
+    @GET("details/json?")
+    Observable<RestaurantResponse> getRestaurantDetails(
+            @Query("key") int key,
+            @Query("place_id") String placeId
     );
 
 }
