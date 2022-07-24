@@ -40,13 +40,27 @@ public class RestaurantResponse {
     @Expose
     private String location;
 
-    public RestaurantResponse(String name, Boolean opennow, String address, int rating, int userRatingsTotal, String photoReference) {
+    @SerializedName("place_id")
+    @Expose
+    private String placeId;
+
+    @SerializedName("website")
+    @Expose
+    private String websiteUrl;
+
+    @SerializedName("formatted_phone_number")
+    @Expose
+    private String phoneNumber;
+
+    public RestaurantResponse(String name, Boolean opennow, String address, int rating, int userRatingsTotal, String photoReference, String website, String phoneNumber) {
         this.name = name;
         this.opennow = opennow;
         this.address = address;
         this.rating = rating;
         this.userRatingsTotal = userRatingsTotal;
         this.photoReference = photoReference;
+        this.websiteUrl = website;
+        this.phoneNumber = phoneNumber;
     }
 
     //GETTERS//
@@ -66,6 +80,16 @@ public class RestaurantResponse {
     public List<Object> getHtmlAttributions() { return htmlAttributions; }
     public int getRating() { return rating; }
     public int getUserRatingsTotal() { return userRatingsTotal; }
+    public String getLocation() { return location; }
+    public String getPlaceId() { return placeId; }
+
+    public String getWebsiteUrl() {
+        return websiteUrl;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
     // SETTERS //
 
@@ -73,4 +97,32 @@ public class RestaurantResponse {
     public void setPhotoReference(String photoReference) { this.photoReference = photoReference; }
     public void setHeight(int height) { this.height = height; }
     public void setWidth(int width) { this.width = width; }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setOpennow(Boolean opennow) {
+        this.opennow = opennow;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public void setUserRatingsTotal(int userRatingsTotal) {
+        this.userRatingsTotal = userRatingsTotal;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setPlaceId(String placeId) {
+        this.placeId = placeId;
+    }
 }
