@@ -18,26 +18,69 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:layout_constraintTop_toBottomOf="@+id/activity_details_photo"
-        android:orientation="vertical"
         android:backgroundTint="@color/toolbar"
-        >
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/activity_details_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="@string/details_restaurant_name"
-            android:textSize="40dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/activity_details_address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="@string/details_restaurant_address"
-            android:textSize="25dp"
-            />
+            <TextView
+                android:id="@+id/activity_details_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/details_restaurant_name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                android:textSize="40dp"/>
+
+            <TextView
+                android:id="@+id/activity_details_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="@string/details_restaurant_address"
+                app:layout_constraintTop_toBottomOf="@+id/activity_details_name"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:textSize="25dp"
+                />
+
+            <ImageView
+                android:id="@+id/activity_details_first_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_one_star_half"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/activity_details_name"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"/>
+
+            <ImageView
+                android:id="@+id/activity_details_second_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_one_star_half"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/activity_details_first_star"
+                android:layout_marginTop="20dp"/>
+
+            <ImageView
+                android:id="@+id/activity_details_third_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_one_star_half"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/activity_details_second_star"
+                android:layout_marginTop="20dp"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -122,9 +165,15 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@+id/activity_restaurant_details_buttons"
+        tools:listitem="@layout/item_workmate_restaurant_details_list"
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-
+        android:id="@+id/activity_details_selected_restaurant_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
@@ -132,6 +181,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/activity_details_photo"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="30dp"
-
+        android:src="@drawable/ic_selected_restaurant_is_check"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
