@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/drawable-anydpi/ic_half_star_rate_24.xml" value="0.19537037037037036" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/drawable-anydpi/ic_map_black.xml" value="0.2203125" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2203125" />
+        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/drawable/ic_baseline_star_rate_24.xml" value="0.19537037037037036" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/drawable/ic_notifications.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/drawable/ic_one_star_half.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/drawable/ic_selected_restaurant_is_check.xml" value="0.19537037037037036" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_authentication.xml" value="0.18" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_main.xml" value="0.14719202898550723" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_main2.xml" value="0.14719202898550723" />
@@ -13,7 +17,7 @@
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_main_nav_header.xml" value="0.16259057971014493" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_main_toolbar.xml" value="0.14719202898550723" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_maps.xml" value="0.13451086956521738" />
-        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_restaurant_details.xml" value="0.18" />
+        <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_restaurant_details.xml" value="0.22" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_restaurant_details_recycler_view.xml" value="0.1" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_restaurant_details_toolbar.xml" value="0.15" />
         <entry key="..\:/Users/Gabrielle/Desktop/DEVELOPPEUR D'APPLICATIONS ANDROID/P7/Go4Lunch/app/src/main/res/layout/activity_restaurants_list.xml" value="0.14719202898550723" />

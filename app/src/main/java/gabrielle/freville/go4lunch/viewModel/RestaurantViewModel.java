@@ -24,6 +24,7 @@ public class RestaurantViewModel extends androidx.lifecycle.ViewModel {
     private UserRepository userRepository;
     public LiveData<List<Restaurant>> listLiveData;
 
+
     public RestaurantViewModel(RestaurantRepository restaurantRepository, UserRepository userRepository) {
         this.restaurantRepository = restaurantRepository;
         this.userRepository = userRepository;
@@ -36,5 +37,9 @@ public class RestaurantViewModel extends androidx.lifecycle.ViewModel {
     public LiveData<List<Restaurant>> getLiveData() {
         listLiveData = restaurantRepository.getRestaurantsLiveData();
         return listLiveData;
+    }
+
+    public void getLocation() {
+        restaurantRepository.getLocationValue();
     }
 }

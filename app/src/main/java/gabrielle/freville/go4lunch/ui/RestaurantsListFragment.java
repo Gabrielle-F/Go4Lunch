@@ -38,7 +38,6 @@ public class RestaurantsListFragment extends Fragment {
     private RecyclerView recyclerView;
     private RestaurantRecyclerViewAdapter adapter;
     private List<Restaurant> restaurantsList = new ArrayList<>();
-    private MainActivity mainActivity;
     private LiveData<List<Restaurant>> listLiveData;
     private FusedLocationProviderClient fusedLocationProviderClient;
     private static final int REQUEST_CODE = 100;

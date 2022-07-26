@@ -9,8 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 import gabrielle.freville.go4lunch.R;
@@ -38,7 +36,7 @@ public class RestaurantRecyclerViewAdapter extends RecyclerView.Adapter<Restaura
 
         holder.restaurantName.setText(restaurant.getName());
         holder.restaurantAddress.setText(restaurant.getAddress());
-        holder.restaurantOpeningHours.setText(restaurant.getHours());
+        holder.restaurantOpeningHours.setText(restaurant.getOpeningHours());
         holder.restaurantUserRatingsTotal.setText(restaurant.getUserRatingsTotal());
     }
 
