@@ -25,7 +25,7 @@ public interface RestaurantService {
     @GET("nearbysearch/json?")
     Observable<List<RestaurantResponse>> getRestaurants(
             @Query("type") String type,
-            @Query("location") Location location,
+            @Query("location") String location,
             @Query("radius") int radius,
             @Query("key") int key
     );

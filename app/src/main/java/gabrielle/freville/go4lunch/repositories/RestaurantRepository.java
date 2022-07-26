@@ -53,7 +53,7 @@ public class RestaurantRepository {
     private String photoReference;
 
     private String type = "restaurant";
-    private Location location;
+    private String location = "48.691335913411834%2C1.0786886399375246";
     private int radius = 5000;
     private int key = R.string.google_maps_key;
 
@@ -73,16 +73,9 @@ public class RestaurantRepository {
         return restaurantService;
     }
 
-    public void getLocationValue() {
-        location = new Location(FUSED_PROVIDER);
-        location.setLatitude(48.691335913411834);
-        location.setLongitude(1.0786886399375246);
-    }
-
     public void getRestaurantsList() {
         this.getRestaurantService();
         this.getRetrofitInstance();
-        getLocationValue();
         restaurantService.getRestaurants(type, location, radius, key)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
